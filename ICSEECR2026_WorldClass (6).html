@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ICSEECR 2026 – International Conference on Sustainable Engineering, Environmental Innovation & Climate Resilience</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --forest: #052b1f;
+    --forest-mid: #0a4430;
+    --forest-vivid: #0f6040;
+    --emerald: #1a8a5a;
+    --jade: #22b876;
+    --mint: #5ed49a;
+    --gold: #c9973a;
+    --gold-bright: #e8b84b;
+    --gold-pale: #f5d47a;
+    --ivory: #f9f7f2;
+    --paper: #f0ede5;
+    --white: #ffffff;
+    --ink: #0c1a12;
+    --slate: #3a5044;
+    --muted: #6b8274;
+    --line: rgba(26,138,90,0.14);
+    --line-strong: rgba(26,138,90,0.28);
+    --shadow-sm: 0 2px 12px rgba(5,43,31,0.08);
+    --shadow-md: 0 8px 32px rgba(5,43,31,0.12);
+    --shadow-lg: 0 20px 60px rgba(5,43,31,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TOP NAV ── */
+  .topbar {
+    background: var(--forest);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+  }
+  .topbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--jade), transparent);
+    opacity: 0.4;
+  }
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .topbar-brand .logo-badge {
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, var(--emerald), var(--gold));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.08);
+  }
+  .topbar-brand span {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: rgba(255,255,255,0.82);
+    letter-spacing: 0.3px;
+  }
+  .topbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+  }
+  .topbar-nav a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 8px 13px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .topbar-nav a:hover { color: white; background: rgba(255,255,255,0.08); }
+  .topbar-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright)) !important;
+    color: var(--forest) !important;
+    font-weight: 700 !important;
+    border-radius: 7px;
+    padding: 7px 15px !important;
+  }
+  .topbar-cta:hover { opacity: 0.9; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--forest);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 30%, rgba(26,138,90,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 20% 80%, rgba(201,151,58,0.08) 0%, transparent 50%);
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image: 
+      linear-gradient(rgba(26,138,90,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,138,90,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 3.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,151,58,0.12);
+    border: 1px solid rgba(201,151,58,0.35);
+    border-radius: 100px;
+    padding: 5px 16px 5px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold-pale);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+  }
+  .hero-eyebrow .dot {
+    width: 6px; height: 6px;
+    background: var(--jade);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.8); }
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 600;
+    color: white;
+    line-height: 1.18;
+    max-width: 820px;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--mint);
+  }
+  .hero-subtitle {
+    font-size: 11px;
+    color: var(--jade);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+  }
+  .hero-theme {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    max-width: 600px;
+    margin-bottom: 2.4rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .hero-theme strong { color: var(--gold-pale); font-style: normal; font-weight: 500; }
+
+  .hero-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-meta-icon {
+    width: 40px; height: 40px;
+    background: rgba(94,212,154,0.1);
+    border: 1px solid rgba(94,212,154,0.2);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .hero-meta-item .label {
+    font-size: 10px;
+    color: var(--mint);
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .hero-meta-item .value {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+  }
+
+  .hero-deadlines {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.4rem 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 2.2rem;
+    max-width: 740px;
+    backdrop-filter: blur(8px);
+  }
+  .deadline-item { display: flex; align-items: center; gap: 12px; }
+  .deadline-item .d-icon { font-size: 20px; }
+  .deadline-item .d-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .deadline-item .d-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--gold-pale);
+    font-weight: 700;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--forest);
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 13px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    letter-spacing: 0.3px;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 20px rgba(201,151,58,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 10px 30px rgba(201,151,58,0.4); }
+  .btn-outline {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 13.5px;
+    padding: 13px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.22);
+    cursor: pointer;
+    transition: all 0.25s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { border-color: var(--mint); color: var(--mint); background: rgba(94,212,154,0.05); }
+
+  .hero-stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+  .stat-item {
+    flex: 1 1 130px;
+    padding: 0.5rem 1.4rem;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+  }
+  .stat-item:first-child { padding-left: 0; }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--mint);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+
+  /* ── SECTION NAV ── */
+  .section-nav {
+    background: rgba(10,68,48,0.98);
+    position: sticky;
+    top: 60px;
+    z-index: 900;
+    border-bottom: 1px solid rgba(26,138,90,0.15);
+    backdrop-filter: blur(8px);
+  }
+  .section-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    scrollbar-width: none;
+  }
+  .section-nav-inner::-webkit-scrollbar { display: none; }
+  .snav-item {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 14px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .snav-item:hover, .snav-item.active {
+    color: white;
+    border-bottom-color: var(--gold);
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .main-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 310px;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .main-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    .sidebar { order: -1; }
+  }
+
+  /* ── SECTIONS ── */
+  .conf-section {
+    margin-bottom: 3.5rem;
+  }
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--forest);
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--line-strong);
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.2px;
+  }
+  .section-heading .sh-icon {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, var(--emerald), var(--jade));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(26,138,90,0.2);
+  }
+
+  /* Welcome */
+  .welcome-text p { margin-bottom: 1rem; color: var(--slate); font-size: 15px; line-height: 1.8; }
+  .welcome-text strong { color: var(--forest); }
+
+  /* Tracks */
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .track-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.3rem 1.4rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .track-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--emerald), var(--jade));
+    border-radius: 3px 0 0 3px;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom;
+  }
+  .track-card:hover::before { transform: scaleY(1); }
+  .track-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+  .track-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--emerald);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .track-title {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--forest);
+    line-height: 1.4;
+  }
+
+  /* School Themes */
+  .school-block {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s;
+  }
+  .school-block:hover { box-shadow: var(--shadow-md); }
+  .school-header {
+    background: linear-gradient(135deg, var(--forest), var(--forest-vivid));
+    padding: 1.2rem 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .school-header::after {
+    content: '';
+    position: absolute;
+    right: -20px; top: -20px;
+    width: 100px; height: 100px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+  }
+  .school-icon { font-size: 1.5rem; }
+  .school-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.2px;
+  }
+  .school-tagline {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 3px;
+  }
+  .school-body { padding: 1.4rem 1.6rem; }
+  .focus-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  .focus-list li {
+    background: rgba(26,138,90,0.06);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 12.5px;
+    color: var(--forest-vivid);
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .focus-list li:hover {
+    background: rgba(26,138,90,0.12);
+    border-color: var(--emerald);
+  }
+
+  /* Guidelines */
+  .guide-box {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .guide-box-header {
+    background: linear-gradient(135deg, var(--forest), var(--forest-mid));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .guide-box-body { padding: 0.3rem 0; }
+  .guide-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    align-items: baseline;
+    transition: background 0.15s;
+  }
+  .guide-item:hover { background: rgba(26,138,90,0.03); }
+  .guide-item:last-child { border-bottom: none; }
+  .guide-key {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--emerald);
+    min-width: 145px;
+    flex-shrink: 0;
+  }
+  .guide-val { font-size: 14px; color: var(--slate); }
+
+  /* Awards */
+  .award-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.3rem;
+  }
+  .award-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.8rem 1.6rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .award-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .award-card:hover::after { transform: scaleX(1); }
+  .award-card:hover {
+    box-shadow: 0 12px 40px rgba(201,151,58,0.14);
+    border-color: rgba(201,151,58,0.3);
+    transform: translateY(-4px);
+  }
+  .award-trophy { font-size: 2.5rem; margin-bottom: 1rem; }
+  .award-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.1px;
+  }
+  .award-desc { font-size: 13px; color: var(--muted); margin-bottom: 1.2rem; line-height: 1.6; }
+  .award-benefits { display: flex; flex-direction: column; gap: 5px; }
+  .award-benefit {
+    font-size: 12px;
+    color: var(--emerald);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+  }
+  .award-benefit::before { content: '✓'; color: var(--jade); }
+
+  /* Registration */
+  .reg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.3rem;
+  }
+  .reg-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+  }
+  .reg-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .reg-card-header {
+    padding: 1.2rem 1.4rem;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .reg-card.international .reg-card-header { background: linear-gradient(135deg, #14426d, #1e6ea8); color: white; }
+  .reg-card.nigerian .reg-card-header { background: linear-gradient(135deg, var(--forest), var(--forest-vivid)); color: white; }
+  .reg-card-body { background: var(--white); padding: 1.2rem 1.4rem; }
+  .reg-fee {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .reg-type { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 1rem; }
+  .reg-fees-list { list-style: none; }
+  .reg-fees-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    color: var(--slate);
+  }
+  .reg-fees-list li:last-child { border-bottom: none; }
+  .reg-fees-list .fee-amt { font-weight: 700; color: var(--emerald); }
+
+  /* Leadership */
+  .leader-cards { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .leader-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1 1 250px;
+    transition: all 0.25s;
+    box-shadow: var(--shadow-sm);
+  }
+  .leader-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .leader-avatar {
+    width: 46px; height: 46px;
+    background: linear-gradient(135deg, var(--emerald), var(--jade));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(26,138,90,0.25);
+  }
+  .leader-name { font-weight: 700; font-size: 13.5px; color: var(--forest); }
+  .leader-role { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* Contact */
+  .contact-row { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.2rem 1.5rem;
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s;
+    box-shadow: var(--shadow-sm);
+  }
+  .contact-card:hover { border-color: var(--jade); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .contact-icon { font-size: 1.5rem; }
+  .contact-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  .contact-value { font-size: 13.5px; color: var(--forest); font-weight: 600; margin-top: 3px; }
+
+  /* ── SIDEBAR ── */
+  .sidebar-widget {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .widget-header {
+    background: linear-gradient(135deg, var(--forest), var(--forest-mid));
+    color: white;
+    padding: 0.9rem 1.3rem;
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .widget-body { padding: 1.1rem 1.3rem; }
+
+  /* Key Dates */
+  .key-dates-list { list-style: none; }
+  .kd-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .kd-item:last-child { border-bottom: none; }
+  .kd-label { font-size: 11.5px; color: var(--muted); font-weight: 500; margin-bottom: 3px; }
+  .kd-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--forest);
+  }
+  .kd-date.past { color: var(--muted); text-decoration: line-through; font-weight: 400; }
+  .kd-date.highlight { color: var(--gold); }
+
+  /* Submission widget */
+  .sub-btn {
+    display: block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--forest);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    transition: all 0.25s;
+    box-shadow: 0 3px 12px rgba(201,151,58,0.25);
+  }
+  .sub-btn:hover { box-shadow: 0 6px 20px rgba(201,151,58,0.4); transform: translateY(-1px); }
+  .sub-btn.outline {
+    background: transparent;
+    border: 1.5px solid var(--line-strong);
+    color: var(--forest-vivid);
+    box-shadow: none;
+  }
+  .sub-btn.outline:hover { background: var(--forest); color: white; box-shadow: none; }
+  .sub-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 0.5rem; }
+
+  /* Highlights widget */
+  .highlight-list { list-style: none; }
+  .hl-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    font-size: 13px;
+    color: var(--slate);
+  }
+  .hl-item:last-child { border-bottom: none; }
+  .hl-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--jade);
+    min-width: 44px;
+  }
+
+  /* Share widget */
+  .share-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .share-btn {
+    flex: 1 1 60px;
+    padding: 9px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--line);
+    color: var(--forest);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: var(--white);
+  }
+  .share-btn:hover { background: var(--forest); color: white; border-color: var(--forest); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--forest);
+    color: rgba(255,255,255,0.55);
+    padding: 3rem 2rem 2rem;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--jade), transparent);
+    opacity: 0.4;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+  }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+  .footer h4 {
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .footer p, .footer li { font-size: 13px; line-height: 1.8; }
+  .footer ul { list-style: none; }
+  .footer a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+  .footer a:hover { color: var(--gold-pale); }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 12px;
+  }
+  .tagline-badge {
+    background: rgba(201,151,58,0.12);
+    border: 1px solid rgba(201,151,58,0.25);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 11px;
+    color: var(--gold-pale);
+    font-style: italic;
+  }
+
+  /* Util */
+  .notice-box {
+    background: rgba(201,151,58,0.07);
+    border: 1px solid rgba(201,151,58,0.25);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    font-size: 14px;
+    color: #5a4010;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
+  }
+  .notice-box .ni { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* Form embed */
+  .form-container {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .form-container iframe {
+    width: 100%;
+    min-height: 600px;
+    border: none;
+    display: block;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .topbar-nav { display: none; }
+    .hero-stats-row { gap: 0; }
+    .stat-item { padding: 0.5rem 0.8rem; }
+    .main-wrap { padding: 1.5rem 1rem; }
+  }
+
+
+  /* Keynote placeholders */
+  .keynote-placeholder {
+    background: var(--white);
+    border: 1.5px dashed var(--line-strong);
+    border-radius: 16px;
+    padding: 1.8rem 1.4rem;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .keynote-placeholder:hover { border-color: var(--jade); }
+  .kp-avatar {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px dashed var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    color: var(--muted);
+    margin: 0 auto 0.8rem;
+  }
+  .kp-label {
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .kp-sub {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Sponsor slots */
+  .sponsor-slot {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.4rem;
+    text-align: center;
+    transition: all 0.25s;
+    box-shadow: var(--shadow-sm);
+  }
+  .sponsor-slot:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .sponsor-slot.sponsor-open {
+    border-style: dashed;
+    background: rgba(26,138,90,0.02);
+  }
+  .sponsor-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+  .sponsor-tier {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--emerald);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .sponsor-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--forest);
+  }
+  .sponsor-slot.sponsor-open .sponsor-name { color: var(--muted); font-weight: 400; font-style: italic; }
+
+  /* Entrance animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-title { animation: fadeUp 0.7s ease 0.1s both; }
+  .hero-subtitle { animation: fadeUp 0.7s ease 0.15s both; }
+  .hero-theme { animation: fadeUp 0.7s ease 0.2s both; }
+  .hero-meta-row { animation: fadeUp 0.7s ease 0.25s both; }
+  .hero-deadlines { animation: fadeUp 0.7s ease 0.3s both; }
+  .hero-btns { animation: fadeUp 0.7s ease 0.35s both; }
+  .hero-stats-row { animation: fadeUp 0.7s ease 0.4s both; }
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topbar">
+  <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" class="topbar-brand">
+    <img src="data:image/jpeg;base64,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" alt="Gateway ICT Polytechnic Logo" style="height:38px;width:38px;object-fit:contain;border-radius:6px;background:white;padding:2px;"/>
+    <span>ICSEECR 2026 &nbsp;|&nbsp; Gateway ICT Polytechnic</span>
+  </a>
+  <ul class="topbar-nav">
+    <li><a href="#welcome">Welcome</a></li>
+    <li><a href="#themes">Themes</a></li>
+    <li><a href="#tracks">Tracks</a></li>
+    <li><a href="#guidelines">Guidelines</a></li>
+    <li><a href="#keynotes">Keynotes</a></li>
+    <li><a href="#registration">Registration</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="https://forms.gle/DL3hnC1QE7Xjo7Tx6" target="_blank" class="topbar-cta">Submit Abstract →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dot"></span>July 08–10, 2026 · Saapade, Ogun State, Nigeria</div>
+    <h1 class="hero-title">International Conference on Sustainable Engineering, Environmental Innovation & Climate Resilience</h1>
+    <p class="hero-subtitle" style="display:flex;align-items:center;gap:10px;">
+      <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;">
+        <img src="data:image/jpeg;base64,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" alt="GAPOSA Logo" style="height:40px;width:40px;object-fit:contain;background:white;border-radius:6px;padding:2px;"/>
+      </a>
+      <span>ICSEECR 2026 &nbsp;·&nbsp; <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" style="color:var(--green-light);text-decoration:none;font-weight:600;">Gateway ICT Polytechnic, Saapade</a></span>
+    </p>
+    <p class="hero-theme">
+      <strong>Conference Theme:</strong> International Conference on Sustainable Engineering, Environmental Innovation &amp; Climate Resilience
+    </p>
+
+    <div class="hero-meta-row">
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">📅</div>
+        <div>
+          <div class="label">Conference Dates</div>
+          <div class="value">July 08 – 10, 2026</div>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">📍</div>
+        <div>
+          <div class="label">Venue</div>
+          <div class="value">Onafowokan Auditorium, Gateway ICT Polytechnic</div>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">🌐</div>
+        <div>
+          <div class="label">International</div>
+          <div class="value">Virtual (FREE)</div>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">🏅</div>
+        <div>
+          <div class="label">Publication</div>
+          <div class="value">IEEE Xplore <em style="font-size:11px;opacity:0.75;">(pending)</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-deadlines">
+      <div class="deadline-item">
+        <div class="d-icon">📋</div>
+        <div>
+          <div class="d-label">Abstract Deadline</div>
+          <div class="d-date">June 08, 2026</div>
+        </div>
+      </div>
+      <div class="deadline-item">
+        <div class="d-icon">✅</div>
+        <div>
+          <div class="d-label">Acceptance Notification</div>
+          <div class="d-date">June 28, 2026</div>
+        </div>
+      </div>
+      <div class="deadline-item">
+        <div class="d-icon">📄</div>
+        <div>
+          <div class="d-label">Full Paper Deadline</div>
+          <div class="d-date">August 10, 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="https://forms.gle/DL3hnC1QE7Xjo7Tx6" target="_blank" class="btn-primary">📨 Submit Abstract</a>
+      <a href="https://forms.gle/DL3hnC1QE7Xjo7Tx6" target="_blank" class="btn-outline">🎟 Register Now</a>
+      <a href="#welcome" class="btn-outline">📖 Learn More</a>
+    </div>
+
+    <div class="hero-stats-row">
+      <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Technical Tracks</div></div>
+      <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Award Categories</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- SECTION NAV -->
+<nav class="section-nav">
+  <div class="section-nav-inner">
+    <a href="#welcome" class="snav-item">Welcome</a>
+    <a href="#themes" class="snav-item">School Themes</a>
+    <a href="#tracks" class="snav-item">Technical Tracks</a>
+    <a href="#guidelines" class="snav-item">Abstract Guidelines</a>
+    <a href="#fullpaper" class="snav-item">Full Paper</a>
+    <a href="#registration" class="snav-item">Registration</a>
+    <a href="#awards" class="snav-item">Awards</a>
+    <a href="#leadership" class="snav-item">Leadership</a>
+    <a href="#submit" class="snav-item">Submit</a>
+    <a href="#sponsors" class="snav-item">Sponsors</a>
+    <a href="#tpc" class="snav-item">TPC</a>
+    <a href="#contact" class="snav-item">Contact</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrap">
+  <main>
+
+    <!-- WELCOME -->
+    <section id="welcome" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🌍</div> Welcome from the Organising Committee</h2>
+      <div class="welcome-text">
+        <p>Dear Colleagues and Researchers,</p>
+        <p>We are delighted to announce the <strong>International Conference on Sustainable Engineering, Environmental Innovation & Climate Resilience (ICSEECR 2026)</strong>, hosted by <strong>Gateway ICT Polytechnic, Saapade, Ogun State, Nigeria</strong>.</p>
+        <p>ICSEECR 2026 provides a premier platform for interdisciplinary collaboration, knowledge exchange, and promoting innovative research in sustainable engineering, environmental innovation, and climate resilience. The conference brings together researchers, engineers, policy makers, and industry professionals from across the globe to address the most pressing challenges of our time.</p>
+        <p>We warmly invite all researchers and professionals to participate and share their expertise across our two thematic schools — <strong>Engineering & Technology</strong> and <strong>Environmental Studies</strong> — covering smart grids, renewable energy, AI-driven environmental monitoring, climate adaptation, waste management, and much more.</p>
+        <p>All accepted and presented papers will be considered for publication in the <strong>IEEE Xplore Digital Library</strong> (subject to IEEE approval), following a rigorous double-blind peer-review process.</p>
+        <p>We look forward to your participation in ICSEECR 2026 — a global forum for innovation, sustainability, and environmental resilience.</p>
+        <p>Best regards,<br/><strong>ICSEECR 2026 Organizing Committee</strong><br/>Gateway ICT Polytechnic, Saapade, Ogun State, Nigeria</p>
+      </div>
+    </section>
+
+
+    <!-- KEYNOTE SPEAKERS -->
+    <section id="keynotes" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🎤</div> Keynote Speakers</h2>
+      <div class="notice-box" style="border-left-color:var(--emerald);background:rgba(26,138,90,0.06);">
+        <span class="ni">📣</span>
+        <span>Keynote speaker announcements are coming soon. We are confirming distinguished speakers from academia and industry. <strong>Check back here for updates.</strong></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem;margin-top:0.5rem;">
+        <div class="keynote-placeholder">
+          <div class="kp-avatar">?</div>
+          <div class="kp-label">Speaker TBC</div>
+          <div class="kp-sub">Engineering &amp; Technology</div>
+        </div>
+        <div class="keynote-placeholder">
+          <div class="kp-avatar">?</div>
+          <div class="kp-label">Speaker TBC</div>
+          <div class="kp-sub">Environmental Science</div>
+        </div>
+        <div class="keynote-placeholder">
+          <div class="kp-avatar">?</div>
+          <div class="kp-label">Speaker TBC</div>
+          <div class="kp-sub">Climate &amp; Policy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHOOL THEMES -->
+    <section id="themes" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🏫</div> School-Based Themes & Focus Areas</h2>
+
+      <div class="school-block">
+        <div class="school-header">
+          <div class="school-icon">🔧</div>
+          <div>
+            <div class="school-name">School of Engineering & Technology</div>
+            <div class="school-tagline">Smart Engineering Systems and Renewable Energy Technologies for a Sustainable Future</div>
+          </div>
+        </div>
+        <div class="school-body">
+          <ul class="focus-list">
+            <li>Smart Grids & Power Systems</li>
+            <li>Solar PV Systems & Diagnostics</li>
+            <li>AI in Engineering Systems</li>
+            <li>Automation & Control</li>
+            <li>IoT & Embedded Systems</li>
+            <li>Predictive Maintenance & Digital Twin</li>
+            <li>Structural Health Monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="school-block">
+        <div class="school-header">
+          <div class="school-icon">🌱</div>
+          <div>
+            <div class="school-name">School of Environmental Studies</div>
+            <div class="school-tagline">Environmental Sustainability, Climate Resilience, and Resource Management for Global Transformation</div>
+          </div>
+        </div>
+        <div class="school-body">
+          <ul class="focus-list">
+            <li>Climate Change Adaptation & Mitigation</li>
+            <li>Environmental Impact Assessment</li>
+            <li>Waste Management & Circular Economy</li>
+            <li>Water Resources & Pollution Control</li>
+            <li>Sustainable Urban Planning</li>
+            <li>Environmental Monitoring (AI & IoT)</li>
+            <li>Ecosystem Restoration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL TRACKS -->
+    <section id="tracks" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🔬</div> Technical Tracks</h2>
+      <div class="tracks-grid">
+        <div class="track-card"><div class="track-num">T-01</div><div class="track-title">Renewable Energy Systems & Smart Grids</div></div>
+        <div class="track-card"><div class="track-num">T-02</div><div class="track-title">AI and IoT in Environmental Monitoring</div></div>
+        <div class="track-card"><div class="track-num">T-03</div><div class="track-title">Sustainable Infrastructure & Green Building</div></div>
+        <div class="track-card"><div class="track-num">T-04</div><div class="track-title">Climate Change Adaptation & Mitigation</div></div>
+        <div class="track-card"><div class="track-num">T-05</div><div class="track-title">Waste-to-Energy and Circular Economy</div></div>
+        <div class="track-card"><div class="track-num">T-06</div><div class="track-title">Environmental Policy & Sustainable Development</div></div>
+        <div class="track-card"><div class="track-num">T-07</div><div class="track-title">Smart Cities & IoT Applications</div></div>
+        <div class="track-card"><div class="track-num">T-08</div><div class="track-title">Water Resources & Environmental Protection</div></div>
+      </div>
+    </section>
+
+    <!-- ABSTRACT GUIDELINES -->
+    <section id="guidelines" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">📄</div> Call for Abstracts — Submission Guidelines</h2>
+      <div class="notice-box">
+        <span class="ni">📢</span>
+        <span>Authors are invited to submit original, high-quality abstracts addressing the conference themes and technical tracks listed below. Submissions must be original, unpublished, and not under review elsewhere.</span>
+      </div>
+      <div class="guide-box">
+        <div class="guide-box-header">📋 Abstract Requirements</div>
+        <div class="guide-box-body">
+          <div class="guide-item"><span class="guide-key">Length</span><span class="guide-val">300 – 500 words</span></div>
+          <div class="guide-item"><span class="guide-key">File Format</span><span class="guide-val">PDF Only</span></div>
+          <div class="guide-item"><span class="guide-key">Review Process</span><span class="guide-val">Double-Blind Peer Review</span></div>
+          <div class="guide-item"><span class="guide-key">Plagiarism Limit</span><span class="guide-val">Less than 20%</span></div>
+          <div class="guide-item"><span class="guide-key">Submission Deadline</span><span class="guide-val">June 08, 2026</span></div>
+          <div class="guide-item"><span class="guide-key">Acceptance Notification</span><span class="guide-val">June 28, 2026</span></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL PAPER -->
+    <section id="fullpaper" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">📝</div> Full Paper Submission (Post-Conference)</h2>
+      <p style="font-size:14px;color:#2c3e35;margin-bottom:1.2rem;">Accepted presenters are invited to submit full papers for potential publication. The organising committee is pursuing publication through <strong>IEEE Xplore Digital Library</strong> (pending IEEE technical sponsorship approval). Authors will be notified of the confirmed publication outlet.</p>
+      <div class="guide-box">
+        <div class="guide-box-header">📐 Full Paper Requirements</div>
+        <div class="guide-box-body">
+          <div class="guide-item"><span class="guide-key">Format</span><span class="guide-val">IEEE Two-Column Template</span></div>
+          <div class="guide-item"><span class="guide-key">Length</span><span class="guide-val">6 – 12 Pages</span></div>
+          <div class="guide-item"><span class="guide-key">File Format</span><span class="guide-val">PDF (IEEE PDF eXpress compliant)</span></div>
+          <div class="guide-item"><span class="guide-key">Review Process</span><span class="guide-val">Standard IEEE review for Xplore inclusion</span></div>
+          <div class="guide-item"><span class="guide-key">Submission Deadline</span><span class="guide-val">August 10, 2026 (post-conference)</span></div>
+          <div class="guide-item"><span class="guide-key">Target Publication</span><span class="guide-val">IEEE Xplore Digital Library <em style="font-size:12px;color:#888;">(pending approval)</em></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION -->
+    <section id="registration" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">💳</div> Registration Details</h2>
+      <div class="reg-grid">
+        <div class="reg-card international">
+          <div class="reg-card-header">🌍 International Participants</div>
+          <div class="reg-card-body">
+            <div class="reg-fee">FREE</div>
+            <div class="reg-type">Virtual Participation</div>
+            <ul class="reg-fees-list">
+              <li><span>Online Attendance</span><span class="fee-amt">₦0</span></li>
+              <li><span>Certificate Included</span><span class="fee-amt">✓</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="reg-card nigerian">
+          <div class="reg-card-header">🇳🇬 Nigerian Participants (On-site)</div>
+          <div class="reg-card-body">
+            <div class="reg-type">Physical Attendance</div>
+            <ul class="reg-fees-list">
+              <li><span>Authors</span><span class="fee-amt">₦25,000 <span style="font-size:11px;color:#888;">≈ $15 USD</span></span></li>
+              <li><span>Students</span><span class="fee-amt">₦10,000 <span style="font-size:11px;color:#888;">≈ $6 USD</span></span></li>
+              <li><span>Listeners</span><span class="fee-amt">₦5,000 <span style="font-size:11px;color:#888;">≈ $3 USD</span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🏆</div> Award Sessions</h2>
+      <p style="font-size:14px;color:#2c3e35;margin-bottom:1.4rem;">ICSEECR 2026 will feature competitive award sessions recognizing excellence in research presentations.</p>
+      <div class="award-cards">
+        <div class="award-card">
+          <div class="award-trophy">🎓</div>
+          <div class="award-title">Best Student Paper Presentation Award</div>
+          <div class="award-desc">Awarded to the most outstanding student research presentation, based on originality, technical quality, presentation, and impact.</div>
+          <div class="award-benefits">
+            <div class="award-benefit">Certificate of Excellence</div>
+            <div class="award-benefit">Conference Recognition</div>
+            <div class="award-benefit">Academic Visibility & Prestige</div>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-trophy">🧑‍🔬</div>
+          <div class="award-title">Best Author Paper Presentation Award</div>
+          <div class="award-desc">Awarded to the best overall paper presentation for academic/industry authors, evaluated on innovation, methodology, and contribution to sustainability.</div>
+          <div class="award-benefits">
+            <div class="award-benefit">Certificate of Excellence</div>
+            <div class="award-benefit">Conference Recognition</div>
+            <div class="award-benefit">Academic Visibility & Prestige</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">👥</div> Conference Leadership</h2>
+      <div class="leader-cards">
+        <div class="leader-card">
+          <div class="leader-avatar">🏛</div>
+          <div>
+            <div class="leader-name">Dr. Sanni Kehinde Oseni</div>
+            <div class="leader-role">Rector, Gateway ICT Polytechnic</div>
+          </div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">⚙️</div>
+          <div>
+            <div class="leader-name">Engr. Oyebola O. O.</div>
+            <div class="leader-role">Dean, School of Engineering & Technology</div>
+          </div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">🌿</div>
+          <div>
+            <div class="leader-name">Mr. Lawal O. A.</div>
+            <div class="leader-role">Dean, School of Environmental Studies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TECHNICAL PROGRAMME COMMITTEE -->
+    <section id="tpc" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🎓</div> Technical Programme Committee</h2>
+      <p style="font-size:14px;color:var(--slate);margin-bottom:1.4rem;line-height:1.8;">
+        The ICSEECR 2026 Technical Programme Committee (TPC) comprises academics and professionals 
+        drawn from Nigerian universities and polytechnics, as well as international collaborators. 
+        The full TPC list will be published here as confirmations are received.
+      </p>
+      <div class="guide-box">
+        <div class="guide-box-header">📌 TPC Roles &amp; Responsibilities</div>
+        <div class="guide-box-body">
+          <div class="guide-item"><span class="guide-key">Review Process</span><span class="guide-val">Double-Blind Peer Review — each abstract reviewed by at least two independent experts</span></div>
+          <div class="guide-item"><span class="guide-key">Review Criteria</span><span class="guide-val">Originality, Technical Quality, Relevance to Themes, Clarity of Presentation</span></div>
+          <div class="guide-item"><span class="guide-key">Ethics Policy</span><span class="guide-val">Plagiarism check required; submissions must be original and not under review elsewhere</span></div>
+          <div class="guide-item"><span class="guide-key">TPC Enquiries</span><span class="guide-val">Contact the Secretariat at icseecr@gaposa.edu.ng</span></div>
+        </div>
+      </div>
+      <div class="notice-box" style="margin-top:1rem;">
+        <span class="ni">📢</span>
+        <span><strong>Call for Reviewers:</strong> Academics and professionals with relevant expertise are invited to serve as reviewers. Please contact the Secretariat with your CV and area(s) of specialisation.</span>
+      </div>
+    </section>
+
+    <!-- SUBMIT FORMS -->
+    <section id="submit" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">📨</div> Abstract Submission</h2>
+      <div class="notice-box">
+        <span class="ni">ℹ️</span>
+        <span>Submit your abstract using the form below. By submitting, authors confirm that the work is original, unpublished, and not concurrently under review elsewhere. Submissions must be in PDF format, 300–500 words, with less than 20% similarity index. The review process is double-blind.</span>
+      </div>
+      <div class="form-container">
+        <div style="padding:2.5rem;text-align:center;background:linear-gradient(135deg,#f0fdf6,#e6f7ef);">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">📋</div>
+          <h3 style="font-family:'Playfair Display',serif;color:var(--green-deep);font-size:1.3rem;margin-bottom:0.6rem;">Ready to Submit Your Abstract?</h3>
+          <p style="font-size:13.5px;color:var(--gray);margin-bottom:1.5rem;max-width:400px;margin-left:auto;margin-right:auto;">Click the button below to open the official submission form. Ensure your abstract is 300–500 words, in PDF format, with less than 20% plagiarism.</p>
+          <a href="https://forms.gle/DL3hnC1QE7Xjo7Tx6" target="_blank" style="display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;text-decoration:none;letter-spacing:0.3px;box-shadow:0 4px 18px rgba(212,168,67,0.35);transition:all 0.2s;">📨 Open Submission Form →</a>
+          <p style="font-size:11.5px;color:var(--gray);margin-top:1rem;">Opens in a new tab · Submissions acknowledged within 48 hours</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SPONSORS & PARTNERS -->
+    <section id="sponsors" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">🤝</div> Sponsors &amp; Partners</h2>
+      <p style="font-size:14px;color:var(--slate);margin-bottom:1.4rem;line-height:1.8;">
+        We welcome institutional sponsors, industry partners, and academic collaborators. 
+        Sponsorship packages are available. Contact the Secretariat to discuss partnership opportunities.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;">
+        <div class="sponsor-slot">
+          <div class="sponsor-icon">🏛</div>
+          <div class="sponsor-tier">Host Institution</div>
+          <div class="sponsor-name">Gateway ICT Polytechnic</div>
+        </div>
+        <div class="sponsor-slot sponsor-open">
+          <div class="sponsor-icon">➕</div>
+          <div class="sponsor-tier">Gold Sponsor</div>
+          <div class="sponsor-name">Your Organisation Here</div>
+        </div>
+        <div class="sponsor-slot sponsor-open">
+          <div class="sponsor-icon">➕</div>
+          <div class="sponsor-tier">Silver Sponsor</div>
+          <div class="sponsor-name">Your Organisation Here</div>
+        </div>
+        <div class="sponsor-slot sponsor-open">
+          <div class="sponsor-icon">➕</div>
+          <div class="sponsor-tier">Media Partner</div>
+          <div class="sponsor-name">Your Organisation Here</div>
+        </div>
+      </div>
+      <a href="mailto:icseecr@gaposa.edu.ng" style="display:inline-flex;align-items:center;gap:8px;background:var(--forest);color:white;padding:11px 24px;border-radius:10px;text-decoration:none;font-weight:600;font-size:13.5px;transition:opacity 0.2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">✉ Become a Sponsor →</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="conf-section">
+      <h2 class="section-heading"><div class="sh-icon">📞</div> Contact & Secretariat</h2>
+      <div class="contact-row">
+        <a href="tel:+2348039272829" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+234 803 927 2829</div>
+          </div>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#3b59575e48485e5f54575a575e505a557b5c565a525715585456" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><span class="__cf_email__" data-cfemail="90f2fcf5e3e3f5f4fffcf1fcf5fbf1fed0f7fdf1f9fcbef3fffd">[email&#160;protected]</span></div>
+          </div>
+        </a>
+        <div class="contact-card">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-label">Venue</div>
+            <div class="contact-value">Gateway ICT Polytechnic, Saapade, Ogun State</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+
+    <!-- Updates -->
+    <div class="sidebar-widget">
+      <div class="widget-header">🔔 Latest Updates</div>
+      <div class="widget-body">
+        <ul class="key-dates-list">
+          <li class="kd-item">
+            <div class="kd-label" style="color:var(--emerald);font-weight:700;">NEW</div>
+            <div style="font-size:13px;color:var(--slate);">Abstract submission deadline extended to <strong>June 08, 2026</strong></div>
+          </li>
+          <li class="kd-item">
+            <div class="kd-label">Keynote speakers</div>
+            <div style="font-size:13px;color:var(--slate);">Announcements coming soon</div>
+          </li>
+          <li class="kd-item">
+            <div class="kd-label">Sponsorship</div>
+            <div style="font-size:13px;color:var(--slate);">Partnership packages now open</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Key Dates -->
+    <div class="sidebar-widget">
+      <div class="widget-header">📅 Key Dates</div>
+      <div class="widget-body">
+        <ul class="key-dates-list">
+          <li class="kd-item">
+            <div class="kd-label">Abstract Submission Deadline</div>
+            <div class="kd-date">June 08, 2026</div>
+          </li>
+          <li class="kd-item">
+            <div class="kd-label">Acceptance Notification</div>
+            <div class="kd-date">June 28, 2026</div>
+          </li>
+          <li class="kd-item">
+            <div class="kd-label">Conference Dates</div>
+            <div class="kd-date highlight">July 08–10, 2026</div>
+          </li>
+          <li class="kd-item">
+            <div class="kd-label">Full Paper Submission</div>
+            <div class="kd-date">August 10, 2026</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="sidebar-widget">
+      <div class="widget-header">📨 Submissions</div>
+      <div class="widget-body">
+        <a href="https://forms.gle/DL3hnC1QE7Xjo7Tx6" target="_blank" class="sub-btn">Submit / Register Now →</a>
+        <p class="sub-note">Abstract: PDF · 300–500 words · &lt;20% plagiarism</p>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="sidebar-widget">
+      <div class="widget-header">🎯 Conference Highlights</div>
+      <div class="widget-body">
+        <ul class="highlight-list">
+          <li class="hl-item"><span class="hl-badge">8</span> Technical Tracks</li>
+          <li class="hl-item"><span class="hl-badge">2</span> Award Categories</li>
+          <li class="hl-item"><span class="hl-badge">FREE</span> International Virtual</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Registration CTA -->
+    <div class="sidebar-widget">
+      <div class="widget-header">💳 Registration</div>
+      <div class="widget-body">
+        <div style="margin-bottom:0.7rem;">
+          <div style="font-size:11px;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:4px;">International (Virtual)</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--green-bright);">FREE</div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:0.7rem;margin-bottom:0.8rem;">
+          <div style="font-size:11px;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">Nigerian (On-site)</div>
+          <div style="font-size:13px;color:#2c3e35;display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(0,0,0,0.05)"><span>Authors</span><strong style="color:var(--green-mid)">₦25,000</strong></div>
+          <div style="font-size:13px;color:#2c3e35;display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(0,0,0,0.05)"><span>Students</span><strong style="color:var(--green-mid)">₦10,000</strong></div>
+          <div style="font-size:13px;color:#2c3e35;display:flex;justify-content:space-between;padding:4px 0"><span>Listeners</span><strong style="color:var(--green-mid)">₦5,000</strong></div>
+        </div>
+        <a href="https://forms.gle/DL3hnC1QE7Xjo7Tx6" target="_blank" class="sub-btn">Register Now →</a>
+      </div>
+    </div>
+
+    <!-- Share -->
+    <div class="sidebar-widget">
+      <div class="widget-header">🔗 Share this Event</div>
+      <div class="widget-body">
+        <div class="share-btns">
+          <a href="https://twitter.com/intent/tweet?text=ICSEECR+2026+Conference+on+Sustainable+Engineering+%26+Climate+Resilience&hashtags=ICSEECR2026,Sustainability" target="_blank" class="share-btn">𝕏 Twitter</a>
+          <a href="https://www.facebook.com/sharer.php?u=" target="_blank" class="share-btn">f Facebook</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="share-btn">in LinkedIn</a>
+          <a href="https://api.whatsapp.com/send?text=ICSEECR+2026+%7C+International+Conference+on+Sustainable+Engineering%2C+Environmental+Innovation+%26+Climate+Resilience+%7C+July+08-10%2C+2026+%7C+Gateway+ICT+Polytechnic" target="_blank" class="share-btn">📱 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Host -->
+    <div class="sidebar-widget">
+      <div class="widget-header">🏫 Host Institution</div>
+      <div class="widget-body" style="font-size:13px;color:#2c3e35;line-height:1.7;text-align:center;">
+        <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:10px;">
+          <img src="data:image/jpeg;base64,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" alt="Gateway ICT Polytechnic Logo" style="height:64px;object-fit:contain;border-radius:8px;background:white;padding:4px;border:1px solid var(--border);"/>
+        </a><br/>
+        <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" style="font-weight:700;color:var(--green-deep);text-decoration:none;font-size:13.5px;">Gateway ICT Polytechnic</a><br/>
+        Saapade, Ogun State, Nigeria<br/><br/>
+        <em style="color:var(--gray);">Onafowokan Main Auditorium</em><br/><br/>
+        <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" style="display:inline-block;background:var(--green-mid);color:white;font-size:12px;font-weight:600;padding:7px 16px;border-radius:7px;text-decoration:none;">🌐 Visit Polytechnic Website →</a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <h4>ICSEECR 2026</h4>
+      <p>International Conference on Sustainable Engineering, Environmental Innovation &amp; Climate Resilience. Hosted by <a href="https://new.gaposa.edu.ng" target="_blank" rel="noopener" style="color:var(--gold-light);font-weight:600;text-decoration:none;">Gateway ICT Polytechnic</a>, Saapade, Ogun State, Nigeria.</p>
+      <p style="margin-top:0.8rem;"><a href="/cdn-cgi/l/email-protection#5f3d333a2c2c3a3b30333e333a343e311f38323e3633713c3032">✉ <span class="__cf_email__" data-cfemail="ec8e80899f9f898883808d8089878d82ac8b818d8580c28f8381">[email&#160;protected]</span></a> &nbsp;·&nbsp; <a href="tel:+2348039272829">📞 +234 803 927 2829</a></p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#keynotes">Keynote Speakers</a></li>
+        <li><a href="#themes">School Themes</a></li>
+        <li><a href="#tracks">Technical Tracks</a></li>
+        <li><a href="#guidelines">Submission Guidelines</a></li>
+        <li><a href="#keynotes">Keynotes</a></li>
+    <li><a href="#registration">Registration</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#tpc">TPC</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Important Dates</h4>
+      <ul>
+        <li>Abstract Deadline: June 08, 2026</li>
+        <li>Notification: June 28, 2026</li>
+        <li>Conference: Jul 08–10, 2026</li>
+        <li>Full Paper: Aug 10, 2026</li>
+      </ul>
+      <div style="margin-top:1rem;">
+        <h4>Publication</h4>
+        <p>IEEE Xplore Digital Library<br/><em>(subject to IEEE approval)</em></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ICSEECR Organising Committee · Gateway ICT Polytechnic, Saapade, Ogun State, Nigeria</span>
+    <span class="tagline-badge">Engineering Smart and Resilient Systems for Sustainable Development</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Active section nav highlighting
+  const snavItems = document.querySelectorAll('.snav-item');
+  const sections = document.querySelectorAll('.conf-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        snavItems.forEach(a => a.classList.remove('active'));
+        const id = entry.target.id;
+        const link = document.querySelector(`.snav-item[href="#${id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // Smooth scroll offset for sticky headers
+  document.querySelectorAll('
